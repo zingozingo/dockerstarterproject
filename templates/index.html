@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .error { color: red; }
+        .weather { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form id="weather-form" method="POST" action="/weather">
+        <input type="text" id="city" name="city" placeholder="Enter city" required>
+        <input type="text" id="country" name="country" placeholder="Enter country code (e.g., US)" maxlength="2">
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-result"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
